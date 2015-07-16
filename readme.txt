@@ -22,6 +22,7 @@ click 	(write "yes" to make the image clickable)
 
 example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
 
+
 == Installation ==
 1. Upload the plugin directory to the /wp-content/plugins/ directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
@@ -34,7 +35,7 @@ example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" clic
 2. the qr code generated
 
 == Changelog ==
-1.0.0 Fisrt stable version
+1.0.0 First stable version
 0.1.0 First version of the plugin
 
 == Upgrade Notice ==
