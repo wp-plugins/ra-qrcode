@@ -16,15 +16,15 @@ write [qrcode] to generate a QRcode for the actual url with size of 100x100 pixe
 
 you can specify these attributes:
 size 	(it indicates the size in pixels for width and height, default: 100)
-alt  	(it indicates the alternative text for the image: default \"scan QR code\")
+alt  	(it indicates the alternative text for the image: default "scan QR code")
 content (leave it blank to pass the actual url or write the content to encode)
-click 	(write \"yes\" to make the image clickable)
+click 	(write "yes" to make the image clickable)
 
-example: [qrcode size=200 content=\"www.robertoalicata.it\" alt=\"scan me NOW\" click=\"yes\"]
+example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
 
 == Installation ==
 1. Upload the plugin directory to the /wp-content/plugins/ directory
-2. Activate the plugin through the \\\'Plugins\\\' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 .
@@ -34,7 +34,8 @@ example: [qrcode size=200 content=\"www.robertoalicata.it\" alt=\"scan me NOW\" 
 2. the qr code generated
 
 == Changelog ==
-0.1.0 First stable version of the plugin
+1.0.0 Fisrt stable version
+0.1.0 First version of the plugin
 
 == Upgrade Notice ==
 .
