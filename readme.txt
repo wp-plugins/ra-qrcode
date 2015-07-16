@@ -27,7 +27,7 @@ example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" clic
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
-.
+
 
 == Screenshots ==
 1. the simplest shortcode
@@ -38,4 +38,3 @@ example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" clic
 0.1.0 First version of the plugin
 
 == Upgrade Notice ==
-.
