@@ -2,7 +2,7 @@
 /* 
 Plugin Name: ra_qrcode
 Plugin URI: http://www.robertoalicata.it/ra_qrcode
-Version: 0.1.0
+Version: 1.0.0
 Author: Roberto Alicata
 Author URI: http://www.robertoalicata.it
 Description: a simple WordPress plugin to generate a QR code with a shortcode
@@ -35,7 +35,7 @@ function ra_qrcode_shortcode( $atts ) {
 		), $atts )
 	);
 
-	$current_url = get_permalink($post->ID);
+	$current_url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '';
 
 	$qr_pre_output = "";
 	$qr_output = "";
