@@ -37,15 +37,18 @@ click 	(write "yes" to make the image clickable)
 
 == Screenshots ==
 1. The simplest shortcode
-
 2. The qr code generated
 
 == Changelog ==
-1.1.0 NEW feature: a tinyMCE button for configure the qrcode shortcut
 
-1.0.0 Fisrt stable version
+= 1.1.0 =
+* NEW feature: a tinyMCE button for configure the qrcode shortcut
 
-0.1.0 First version of the plugin
+= 1.0.0 =
+* Fisrt stable version
+
+= 0.1.0 =
+* First version of the plugin
 
 == Upgrade Notice ==
 .
