@@ -12,15 +12,21 @@ a simple WordPress plugin to generate a QR code with a configurable shortcode.
 
 == Description ==
 Usage:
+
 write [qrcode] to generate a QRcode for the actual url with size of 100x100 pixels
 
 you can specify these attributes:
+
 size 	(it indicates the size in pixels for width and height, default: 100)
+
 alt  	(it indicates the alternative text for the image: default "scan QR code")
+
 content (leave it blank to pass the actual url or write the content to encode)
+
 click 	(write "yes" to make the image clickable)
 
-example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
+**example**: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
+
 
 == Installation ==
 1. Upload the plugin directory to the /wp-content/plugins/ directory
@@ -31,6 +37,7 @@ example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" clic
 
 == Screenshots ==
 1. The simplest shortcode
+
 2. The qr code generated
 
 == Changelog ==
