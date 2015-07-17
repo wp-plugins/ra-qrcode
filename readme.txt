@@ -41,6 +41,9 @@ click 	(write "yes" to make the image clickable)
 
 == Changelog ==
 
+= 1.1.1 =
+* Fixed some bugs on the clickkable qrcode
+
 = 1.1.0 =
 * NEW feature: a tinyMCE button for configure the qrcode shortcut
 
