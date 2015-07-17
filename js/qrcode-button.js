@@ -32,7 +32,7 @@
 			        },			        
 					{
 						type: 'listbox',
-						name: 'link',
+						name: 'click',
 						label: 'QRCode clickable?',
 						'values': [
 							{text: 'Yes', value: 'yes'},
@@ -50,7 +50,7 @@
 
 			       		output += ' size="' + e.data.size + '"';
 			       		output += ' alt="' + e.data.alt + '"';
-			       		output += ' link="' + e.data.link + '"';
+			       		output += ' click="' + e.data.click + '"';
 			       		output += ' ]';
 
 			            editor.insertContent( output) ;
