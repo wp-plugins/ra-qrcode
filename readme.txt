@@ -1,10 +1,10 @@
-﻿=== ra_qrcode ===
+=== ra_qrcode ===
 Contributors: RobertoAlicata
 Tags: qr code, qrcode, qr code generator, qrcode generator, qr code shortcode
 Donate link: http://www.robertoalicata.it
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,7 @@ a simple WordPress plugin to generate a QR code with a configurable shortcode.
 
 == Description ==
 Usage:
+
 write [qrcode] to generate a QRcode for the actual url with size of 100x100 pixels
 
 you can specify these attributes:
@@ -24,8 +25,7 @@ content (leave it blank to pass the actual url or write the content to encode)
 
 click 	(write "yes" to make the image clickable)
 
-
-example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
+**example**: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
 
 
 == Installation ==
@@ -36,14 +36,19 @@ example: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" clic
 .
 
 == Screenshots ==
-1. the simplest shortcode
-
-2. the qr code generated
+1. The simplest shortcode
+2. The qr code generated
 
 == Changelog ==
-1.0.0 First stable version
 
-0.1.0 First version of the plugin
+= 1.1.0 =
+* NEW feature: a tinyMCE button for configure the qrcode shortcut
+
+= 1.0.0 =
+* Fisrt stable version
+
+= 0.1.0 =
+* First version of the plugin
 
 == Upgrade Notice ==
 .
