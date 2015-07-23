@@ -4,11 +4,11 @@ Tags: qr code, qrcode, qr code generator, qrcode generator, qr code shortcode
 Donate link: http://www.robertoalicata.it
 Requires at least: 3.0
 Tested up to: 4.2
-Stable tag: 1.1.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-a simple WordPress plugin to generate a QR code with a configurable shortcode.
+a simple WordPress plugin to generate a QR code with a configurable shortcode and Widget
 
 == Description ==
 Usage:
@@ -40,6 +40,9 @@ click 	(write "yes" to make the image clickable)
 2. The qr code generated
 
 == Changelog ==
+
+= 2.0.0 =
+* NEW feature: the Widget
 
 = 1.1.1 =
 * Fixed some bugs on the clickkable qrcode

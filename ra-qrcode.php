@@ -2,7 +2,7 @@
 /* 
 Plugin Name: ra_qrcode
 Plugin URI: http://www.robertoalicata.it/ra_qrcode
-Version: 1.1.1
+Version: 2.0.0
 Author: Roberto Alicata
 Author URI: http://www.robertoalicata.it
 Description: a simple WordPress plugin to generate a QR code with a shortcode
@@ -98,5 +98,110 @@ function ra_code_css() {
 }
  
 add_action('admin_enqueue_scripts', 'ra_code_css');
+
+
+class Ra_Qrcode_Widget extends WP_Widget {
+
+	function ra_qrcode_widget() {
+		// Istanzia l'oggetto genitore
+		parent::__construct( false, 'RA QRcode__' );
+	}
+
+	function widget( $args, $instance ) {
+		// Output del widget
+		extract($args);
+		$title = apply_filters('widget_title', $instance['title'] );
+		echo $before_widget;
+		if ( $title )
+			echo $before_title . $title . $after_title;
+			//do widget here			
+
+
+		$out = '[qrcode size=' .$instance['size'] . ' content="' . $instance['content'] . '" alt="' . $instance['alt'] . '" ';
+		if ($instance['click'] == "on") {
+			$out .= 'click="yes" ';
+		}
+		$out .= ']';
+
+
+		echo do_shortcode( $out );
+		echo $after_widget;
+		
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Salva le opzioni del widget
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['content'] = strip_tags($new_instance['content']);
+		$instance['size'] = strip_tags($new_instance['size']);
+		$instance['alt'] = strip_tags($new_instance['alt']);
+		$instance['click'] = $new_instance['click'];
+
+		return $instance;
+	}
+
+	function form( $instance ) {
+		// Stampa il modulo di amministrazione con le opzioni del widget
+		if ( $instance ) {
+			$title = esc_attr($instance['title'] );
+			$content = esc_attr($instance['content'] );
+			$size = esc_attr($instance['size'] );
+			$alt = esc_attr($instance['alt'] );
+			$click = esc_attr($instance['click'] );
+		} else {
+			$title = "QR code";
+			$content = '';
+			$size = '100';
+			$alt = '';
+			$click = false;
+		}
+
+		?>
+			<p>
+				<label>Title</label>
+				<input class="widefat" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title ?>" />
+			</p>
+			<p>
+				<label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content to Encode in QR Code:'); ?></label> 
+				<input class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" type="text" value="<?php echo $content; ?>" />
+				<br/><small>leave it blank to pass the actual url or write the content to encode.</small>
+			</p>
+			<p>
+			<table class="widefat">
+				<tr>
+					<td>
+						<label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Size:'); ?></label> 
+						<input size="3" id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" type="text" value="<?php echo $size; ?>" />
+						<span>in pixels</span>
+					</td>
+					<td>
+						<label for="<?php echo $this->get_field_id( 'click' ); ?>"><?php _e('Clickable?'); ?></label>
+						<input class="checkbox" type="checkbox" <?php checked( (bool) $click, true ); ?> id="<?php echo $this->get_field_id( 'click' ); ?>" name="<?php echo $this->get_field_name( 'click' ); ?>" />
+									
+					</td>
+				</tr>
+			</table>
+
+			</p>
+			<p>
+				<label for="<?php echo $this->get_field_id('alt'); ?>"><?php _e('Alternative Text:'); ?></label> 
+				<input class="widefat" id="<?php echo $this->get_field_id('alt'); ?>" name="<?php echo $this->get_field_name('alt'); ?>" type="text" value="<?php echo $alt; ?>" />
+				<br/><small>it indicates the alternative text for the image: default "scan QR code".</small>
+			</p>
+		<?php
+
+	}
+}
+
+function ra_qrcode_register_widgets() {
+	register_widget( 'Ra_Qrcode_Widget' );
+}
+
+add_action( 'widgets_init', 'ra_qrcode_register_widgets' );
+
+
+
+
 
 ?>
