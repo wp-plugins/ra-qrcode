@@ -2,9 +2,9 @@
 Contributors: RobertoAlicata
 Tags: qr code, qrcode, qr code generator, qrcode generator, qr code shortcode
 Donate link: http://www.robertoalicata.it
-Requires at least: 3.0
-Tested up to: 4.2
-Stable tag: 2.0.0
+Requires at least: 3.5
+Tested up to: 4.2.3
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ content (leave it blank to pass the actual url or write the content to encode)
 
 click 	(write "yes" to make the image clickable)
 
+fgcolor (foreground color in hexadecimal format)
+
+bgcolor (background color in hexadecimal format)
+
 **example**: [qrcode size=200 content="www.robertoalicata.it" alt="scan me NOW" click="yes"]
 
 
@@ -40,6 +44,9 @@ click 	(write "yes" to make the image clickable)
 2. The qr code generated
 
 == Changelog ==
+
+= 2.1.0 =
+* NEW feature: Now you can change foreground and background color
 
 = 2.0.0 =
 * NEW feature: the Widget
