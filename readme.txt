@@ -46,7 +46,7 @@ bgcolor (background color in hexadecimal format)
 == Changelog ==
 
 = 2.1.0 =
-* NEW feature: Now you can change foreground and background color
+* NEW feature: Now you can change foreground and background color (require GD library installed on the server)
 
 = 2.0.0 =
 * NEW feature: the Widget
